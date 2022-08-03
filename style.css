@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root{
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --orange: hsl(25, 97%, 53%);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -6,8 +16,106 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: var(--very-dark-blue);
+    font-family: "Overpass", sans-serif;
 }
 
-.container {
-    width:30rem;
+.container {  
+    width: 400px;
+    height: min-content;
+    background-color: var(--very-dark-blue);
+    background: linear-gradient(180deg, var(--dark-blue), var(--very-dark-blue));
+    border-radius: 20px;
+    padding: 0 40px;
+}
+
+.rating{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "."
+      "."
+      "."
+      ".";
+    
+}
+
+.star{
+    grid-row: 1/2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.star-icon{
+    width: 20px;
+    height: auto;
+    padding: 15px;
+    background-color: var(--dark-blue);
+    border-radius: 50%;
+}
+
+.feedback{
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.question{
+    color: white;
+}
+
+.request{
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--light-grey);
+    line-height: 1.6;
+    width: 23rem;
+}
+
+.score{
+    grid-row: 3/4;
+    display: flex;
+    margin-left: 0;
+    justify-content: flex-start;
+    gap: 30px;
+    align-items: center;
+}
+
+.number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 20px;
+    height: auto;
+    border-radius: 50%;
+    background-color: var(--dark-blue);
+    color: var(--light-grey);
+}
+
+.submit-button{
+    grid-row: 4/5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit{
+    background-color: var(--orange);
+    width: 100%;
+    padding: 20px 0;
+    border-radius: 2em;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Overpass", sans-serif;
+    color: white;
+}
+
+.thank-you-state{
+    display: none;
 }
