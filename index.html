@@ -12,6 +12,7 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {color: hsl(217, 12%, 63%);}
   </style>
 </head>
 <body>
@@ -23,18 +24,23 @@
         <img src="./images/icon-star.svg" alt="star icon" class="star-icon">
       </div>
       <div class="feedback">
-        <h2 class="question">How did we do?</h2>
+        <h1 class="question">How did we do?</h1>
 
         <p class="request">Please let us know how we did with your support request. All feedback is appreciated 
         to help us improve our offering!</p>
       </div>
 
       <div class="score">
-        <span class="number">1</span>
-        <span class="number">2</span>
-        <span class="number">3</span>
-        <span class="number">4</span>
-        <span class="number">5</span>
+        <input type="button" name="numbers" id="number1">
+        <label for="number1">1</label>
+        <input type="button" name="numbers" id="number2">
+        <label for="number2">2</label>
+        <input type="button" name="numbers" id="number3">
+        <label for="number3">3</label>
+        <input type="button" name="numbers" id="number4">
+        <label for="number4">4</label>
+        <input type="button" name="numbers" id="number5">
+        <label for="number5">5</label>
 
       </div>
       <div class="submit-button">
@@ -45,16 +51,17 @@
 
     <!-- Thank you state start -->
     <div class="thank-you-state">
-      <div class="thank-you-image">
+      <div class="image">
         <img src="./images/illustration-thank-you.svg" alt="thank you">
       </div>
+      <div class="score-msg">
+        <p>You selected <span class="selected-score"></span> out of 5</p>
+      </div>
 
-      <p class="selected-score">You selected<span></span> out of 5</p>
+      <h1 class="thank-you-heading">Thank you!</h1>
 
-      Thank you!
-
-      We appreciate you taking the time to give a rating. If you ever need more support, 
-      don’t hesitate to get in touch!
+      <p class="thank-you-msg">We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!</p>
     </div>
     
 
@@ -64,7 +71,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Eero Liuska</a>.
   </div>
 </body>
 </html>
