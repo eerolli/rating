@@ -101,13 +101,15 @@ label{
 }
 
 label:hover{
-    background-color: var(--orange);
+    background-color: grey;
+    transition: 0.5s;
     color: white;
     cursor: pointer;
 }
 
-label:focus{
-    background-color: grey;
+input:checked + label{
+    background-color: var(--orange);
+    color: white;
 }
 
 .submit-button{
@@ -132,6 +134,7 @@ label:focus{
     cursor: pointer;
     background-color: white;
     color: var(--orange);
+    transition: 0.5s;
 }
 
 .thank-you-state{
@@ -178,9 +181,4 @@ label:focus{
 
 .thank-you-heading, .thank-you-msg{
     text-align: center;
-}
-
-.active {
-    background-color: grey;
-    color: white;
 }
