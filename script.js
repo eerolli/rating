@@ -1,15 +1,16 @@
 let thankYouCard = document.querySelector(".thank-you-state");
+let ratingCard = document.querySelector(".rating");
 let submit = document.querySelector(".submit");
-let rating = document.querySelector(".rating");
+let numbers = document.querySelectorAll(".number");
+let selectedScore = document.querySelector(".selected-score");
 
-function showThanks() {
-    if (thankYouCard.style.display === "block") {
-        thankYouCard.style.display = "none";
-        rating.style.display = "block"
-    }
-    else{
-        thankYouCard.style.display = "none";
-    }
-}
+submit.addEventListener("click", () =>{
+    thankYouCard.style.display = "block";
+    ratingCard.style.display = "none";
+})
 
-submit.addEventListener("click", showThanks());
+numbers.forEach((number) => {
+    number.addEventListener("click", () => {
+        selectedScore.textContent = number.textContent;
+    })
+})
